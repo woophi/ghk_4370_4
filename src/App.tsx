@@ -73,24 +73,20 @@ const data = [
 ];
 
 export const App = () => {
-  const [loading, setLoading] = useState(false);
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
   const [thxShow1, setThx1] = useState(false);
 
   const submit = () => {
     window.gtag('event', '4370_map_var4');
-    setLoading(true);
+
     // LS.setItem(LSKeys.ShowThx, true);
     setThx(true);
-    setLoading(false);
   };
   const submitOnRow = (analytcis: string) => {
     window.gtag('event', analytcis);
 
-    setLoading(true);
     // LS.setItem(LSKeys.ShowThx, true);
     setThx1(true);
-    setLoading(false);
   };
 
   if (thxShow1) {
