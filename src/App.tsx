@@ -1,4 +1,3 @@
-import { ButtonMobile } from '@alfalab/core-components/button/mobile';
 import { Gap } from '@alfalab/core-components/gap';
 import { Typography } from '@alfalab/core-components/typography';
 import { useState } from 'react';
@@ -8,6 +7,7 @@ import klv from './assets/klv.png';
 import lav from './assets/lav.png';
 import pere from './assets/pere.png';
 import pet from './assets/pet.png';
+import point from './assets/point.png';
 import ya from './assets/ya.png';
 import { LS, LSKeys } from './ls';
 import { appSt } from './style.css';
@@ -104,6 +104,7 @@ export const App = () => {
   return (
     <>
       <div className={appSt.container}>
+        <img style={{ marginLeft: 'auto' }} src={point} width={18} height={26} onClick={submit} />
         {data.map(item => (
           <div className={appSt.row} key={item.title} onClick={() => submitOnRow(item.analytics)}>
             <img width={48} height={48} src={item.img} />
@@ -127,12 +128,6 @@ export const App = () => {
         ))}
       </div>
       <Gap size={96} />
-
-      <div className={appSt.bottomBtn}>
-        <ButtonMobile loading={loading} block view="primary" onClick={submit}>
-          На карте
-        </ButtonMobile>
-      </div>
     </>
   );
 };
