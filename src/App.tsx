@@ -79,13 +79,13 @@ export const App = () => {
   const submit = () => {
     window.gtag('event', '4370_map_var4');
 
-    // LS.setItem(LSKeys.ShowThx, true);
+    LS.setItem(LSKeys.ShowThx, true);
     setThx(true);
   };
   const submitOnRow = (analytcis: string) => {
     window.gtag('event', analytcis);
 
-    // LS.setItem(LSKeys.ShowThx, true);
+    LS.setItem(LSKeys.ShowThx, true);
     setThx1(true);
   };
 
